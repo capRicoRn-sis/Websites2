@@ -40,7 +40,7 @@ nav ul {
 
 /* スライドショーエリア [cite: 8, 9] */
 .hero-slideshow {
-    background: #eee;
+    background: #f0ffff;
     display: flex;
     align-items: flex-start;
     justify-content: center;
