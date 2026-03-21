@@ -141,5 +141,27 @@
         </section>
     </main>
 
+    <script>
+    function startSlideshow(containerId) {
+        const container = document.getElementById(containerId);
+        const images = container.getElementsByClassName('slide-img');
+        let currentIndex = 0;
+
+        setInterval(() => {
+            // 現在の画像から active クラスを外す
+            images[currentIndex].classList.remove('active');
+            
+            // 次の画像のインデックスを計算
+            currentIndex = (currentIndex + 1) % images.length;
+            
+            // 次の画像に active クラスをつける
+            images[currentIndex].classList.add('active');
+        }, 3000); // 3000ミリ秒 = 3秒 [cite: 8, 9]
+    }
+
+    // 左と右、それぞれのスライドショーを開始
+    startSlideshow('slideshow-left');
+    startSlideshow('slideshow-right');
+</script>
 </body>
 </html>
