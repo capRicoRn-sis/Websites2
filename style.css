@@ -18,7 +18,14 @@ header {
 .site-title {
     font-size: 1.5rem;
     font-weight: bold;
-    margin-right: 50%;
+    margin-left: auto;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;
 }
 
 nav ul {
@@ -28,6 +35,7 @@ nav ul {
     justify-content: center;
     gap: 15px;
     font-size: 0.9rem;
+    margin: 0;
 }
 
 /* スライドショーエリア [cite: 8, 9] */
