@@ -30,7 +30,7 @@ nav ul {
     font-size: 0.9rem;
 }
 
-/* スライドショーエリア */
+/* スライドショーエリア [cite: 8, 9] */
 .hero-slideshow {
     background: #eee;
     height: 300px;
@@ -41,16 +41,19 @@ nav ul {
     margin-bottom: 40px;
 }
 
-/* サービスセクション */
+/* サービスセクション：ここを横並びからタテ並びに変更しました */
 .services {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column; /* タテ並びに指定 */
+    align-items: center;    /* 中央揃え */
+    gap: 40px;              /* ボックス間の余白 */
     padding: 40px 5%;
     background: #fdfdfd;
 }
 
 .service-box {
-    width: 45%;
+    width: 80%;             /* タテ並び用に幅を調整 */
+    max-width: 600px;
     border: 1px solid #ddd;
     padding: 20px;
 }
@@ -66,7 +69,7 @@ nav ul {
     cursor: pointer;
 }
 
-/* メッセージセクション */
+/* メッセージセクション [cite: 18-26] */
 .message {
     padding: 60px 10%;
     background: #fff;
@@ -90,7 +93,7 @@ nav ul {
     font-weight: bold;
 }
 
-/* 高専生セクション */
+/* 高専生セクション [cite: 35-55] */
 .kosen-special {
     background: #eef7ff;
     padding: 60px 10%;
