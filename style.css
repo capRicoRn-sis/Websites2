@@ -52,8 +52,8 @@ nav ul {
 }
 
 .service-box {
-    width: 90%;             /* タテ並び用に幅を調整 */
-    max-width: 900px;
+    width: 95%;             /* タテ並び用に幅を調整 */
+    max-width: 1000px;
     border: 1px solid #ddd;
     padding: 20px;
 }
