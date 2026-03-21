@@ -118,7 +118,8 @@ nav ul {
 }
 
 .name {
-    font-size: 1.5rem;
+    align-items: center;
+    justify-content: right;
     font-weight: bold;
 }
 
