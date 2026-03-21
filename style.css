@@ -111,16 +111,11 @@ nav ul {
     margin: 20px 0;
 }
 
-.coach {
-    margin-top: 40px;
+.coachname {
+    margin-left: 50%;
     padding-top: 10px;
 }
 
-.name {
-    align-items: center;
-    justify-content: right;
-    font-weight: bold;
-}
 
 /* 高専生セクション [cite: 35-55] */
 .kosen-special {
