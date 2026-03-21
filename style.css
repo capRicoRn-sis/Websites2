@@ -33,12 +33,41 @@ nav ul {
 /* スライドショーエリア [cite: 8, 9] */
 .hero-slideshow {
     background: #eee;
-    height: 300px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    padding: 60px 5% 100px;
+}
+
+.slide-box-left{
+    width: 55%;
+    height: 400px;
+    background: #ddd;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    margin-bottom: 40px;
+    border-radius: 5px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.slide-box-right {
+    width: 35%;
+    height: 300px;
+    background: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+    border-radius: 5px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* スライドショーの文字（注釈） */
+.slide-item-text {
+    font-size: 0.9rem;
+    color: #666;
+    padding: 20px;
 }
 
 /* サービスセクション：ここを横並びからタテ並びに変更しました */
