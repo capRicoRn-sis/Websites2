@@ -44,31 +44,49 @@ nav ul {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    gap: 20px;
-    padding: 60px 5% 100px;
+    gap: 30px;
+    padding: 60px 5% 120px;
+    height: 500px;
 }
 
 .slide-box-left{
+    position: relative;
     width: 55%;
-    height: 400px;
+    aspect-ratio: 16 / 10;
     background: #ddd;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 .slide-box-right {
-    width: 35%;
-    height: 300px;
+    position: relative;
+    width: 30%; /* 左(55%)より小さく設定 */
+    aspect-ratio: 4 / 3; /* 少し正方形に近い形に */
     background: #ccc;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 80px;
-    border-radius: 5px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    
+    /* 右のボトムを左より下げるための設定 */
+    align-self: flex-end; 
+    margin-bottom: -40px; /* さらに下に突き出すように調整 */
+}
+
+/* スライドショー画像の共通設定 */
+.slide-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 枠いっぱいに隙間なく表示 */
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide-img.active {
+    opacity: 1;
 }
 
 /* スライドショーの文字（注釈） */
