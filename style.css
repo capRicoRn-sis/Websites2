@@ -1,124 +1,135 @@
-/* 基本スタイル */
+/* 基本設定 */
 body {
-    font-family: 'Noto Sans JP', sans-serif;
-    line-height: 1.6;
+    font-family: sans-serif;
+    line-height: 1.8;
     color: #333;
     margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
+    text-align: center;
 }
 
 header {
     background: #fff;
-    padding: 1rem 5%;
-    position: fixed;
-    width: 90%;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    position: sticky;
     top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 100;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.site-title {
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 nav ul {
-    display: flex;
     list-style: none;
-}
-
-nav ul li {
-    margin-left: 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
     font-size: 0.9rem;
 }
 
-/* ヒーローエリア */
-.hero {
-    margin-top: 60px;
-    height: 400px;
-    background: #f4f4f4;
+/* スライドショーエリア */
+.hero-slideshow {
+    background: #eee;
+    height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    flex-direction: column;
+    margin-bottom: 40px;
 }
 
-.video-placeholder {
-    width: 100%;
-    height: 180px;
-    background: #ddd;
+/* サービスセクション */
+.services {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 5%;
+    background: #fdfdfd;
+}
+
+.service-box {
+    width: 45%;
+    border: 1px solid #ddd;
+    padding: 20px;
+}
+
+.video-container {
+    background: #000;
+    color: #fff;
+    height: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background 0.3s;
+    margin: 15px 0;
     cursor: pointer;
 }
 
-.video-placeholder:hover {
-    background: #bbb;
+/* メッセージセクション */
+.message {
+    padding: 60px 10%;
+    background: #fff;
 }
 
-/* セクション設定 */
-section {
-    padding: 4rem 10%;
-    text-align: center;
-}
-
-/* 高専セクション */
-.kosen-section {
-    background: #004a99; /* 高専をイメージした濃い青 */
-    color: #fff;
-}
-
-.kosen-badge {
-    display: inline-block;
-    background: #ffcc00;
-    color: #333;
-    padding: 5px 15px;
-    border-radius: 20px;
+.highlight {
+    font-size: 1.2rem;
     font-weight: bold;
-    margin-bottom: 1rem;
+    color: #2c3e50;
+    margin: 20px 0;
 }
 
-.features {
+.coach {
+    margin-top: 40px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.name {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* 高専生セクション */
+.kosen-special {
+    background: #eef7ff;
+    padding: 60px 10%;
+    margin-top: 40px;
+}
+
+.kosen-special h2 {
+    color: #004a99;
+    font-size: 1.8rem;
+}
+
+.grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
-    margin: 2rem 0;
+    text-align: left;
+    margin-top: 30px;
 }
 
-.feature-item {
-    background: rgba(255,255,255,0.1);
-    padding: 1.5rem;
-    border-radius: 10px;
+.item {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* ボタン */
+/* ボタン・リンク */
 .btn {
     display: inline-block;
-    padding: 12px 30px;
-    margin: 10px;
+    padding: 10px 20px;
+    background: #333;
+    color: #fff;
     text-decoration: none;
+    margin: 10px;
     border-radius: 5px;
-    font-weight: bold;
-    transition: transform 0.2s;
 }
 
-.btn.primary { background: #e67e22; color: #fff; }
-.btn.secondary { background: #34495e; color: #fff; }
-.btn:hover { transform: translateY(-3px); }
-
-.service-card {
-    border: 1px solid #eee;
-    padding: 1.5rem;
-    margin-bottom: 2rem;
-    border-radius: 10px;
+.en-sub {
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: -10px;
 }
