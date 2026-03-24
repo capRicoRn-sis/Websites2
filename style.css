@@ -84,9 +84,6 @@ nav ul {
     background: #fff;
     position: relative;
     border: 3px solid #333; /* 枠を少し太く */
-    
-    /* 二重線にするための影（ずらした線を表現） */
-    box-shadow: 15px 15px 0 0 #333;
 }
 
 /* タイトル（英会話・勉強サポート）を枠の外へ */
@@ -106,7 +103,7 @@ nav ul {
     background: #000;
     color: #fff;
     width: 100%;
-    height: 300px; /* 高さを大きく */
+    height: 500px; /* 高さを大きく */
     display: flex;
     align-items: center;
     justify-content: center;
