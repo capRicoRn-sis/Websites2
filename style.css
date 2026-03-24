@@ -48,8 +48,6 @@ nav ul {
     padding: 60px 5%;
     height: 500px;
 }
-
-/* 画像を包む「窓」の設定 */
 .slide-box-left {
     position: relative; /* 子要素の基準点になる */
     width: 45%;         /* 窓の横幅 */
@@ -69,20 +67,6 @@ nav ul {
 
     margin-top: 80px;
 }
-
-/* スライドショー画像の共通設定 */
-.slide-img {
-    position: absolute; /* 窓の中で重ねる */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;  /* 窓のサイズに合わせて画像を切り抜く */
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
-
-/* スライドショー画像の共通設定 */
 .slide-img {
     position: absolute;
     top: 0;
@@ -103,6 +87,7 @@ nav ul {
     color: #666;
     padding: 20px;
 }
+
 
 /* --- サービスセクション全体 --- */
 .services {
@@ -131,15 +116,28 @@ nav ul {
 }
 
 .service-box .title-group {
-    flex: 0 0 250px;      /* 幅を250pxで固定し、縮ませない */
+    flex: 0 0 250px;      
     text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
+/* 英会話と勉強サポートの文字 */
 .service-box h2 {
-    position: static;     /* 浮かさない（重要！） */
+    position: static;     
     font-size: 2.5rem;
-    margin: 0 0 10px 0;
-    line-height: 1.2;
+    margin: 0;
+    line-height: 1.1;
+    color: #2f4f4f
+}
+
+/* 英語サブタイトルの微調整 */
+.en-sub {
+    font-size: 1.2rem;
+    color: #888;
+    text-align: left;
+    margin: 5px 0 20px 0;
 }
 
 .video-container {
@@ -154,13 +152,6 @@ nav ul {
     cursor: pointer;
 }
 
-/* 英語サブタイトルの微調整 */
-.en-sub {
-    font-size: 1.2rem;
-    color: #888;
-    text-align: left;
-    margin-bottom: 20px;
-}
 
 
 
