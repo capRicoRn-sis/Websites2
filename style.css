@@ -38,15 +38,41 @@ nav ul {
     margin: 0;
 }
 
-/* スライドショーエリア [cite: 8, 9] */
+/* スライドショーエリアの親コンテナ */
 .hero-slideshow {
     background: #f0ffff;
     display: flex;
-    align-items: flex-start;
+    align-items: center; /* 中央に揃える */
     justify-content: center;
     gap: 30px;
-    padding: 60px 5% 120px;
+    padding: 60px 5%;
     height: 500px;
+}
+
+/* 画像を包む「窓」の設定 */
+.slide-box-left, .slide-box-right {
+    position: relative; /* 子要素の基準点になる */
+    width: 45%;         /* 窓の横幅 */
+    height: 400px;      /* 窓の高さ */
+    overflow: hidden;   /* 窓からはみ出た画像を隠す */
+    border-radius: 10px; /* 角を少し丸くすると綺麗です */
+    background: #eee;   /* 画像読み込み前の背景色 */
+}
+
+/* スライドショー画像の共通設定 */
+.slide-img {
+    position: absolute; /* 窓の中で重ねる */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* 窓のサイズに合わせて画像を切り抜く */
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide-img.active {
+    opacity: 1;
 }
 
 /* サービスボックス全体の調整 */
