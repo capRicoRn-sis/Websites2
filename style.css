@@ -86,7 +86,7 @@ nav ul {
     opacity: 1;
 }
 
-/* サービスボックス全体の調整 */
+/* /* サービスボックス全体の調整 */
 .service-box {
     width: 95%;
     max-width: 1000px;
@@ -95,6 +95,7 @@ nav ul {
     background: #fff;
     position: relative;
 }
+ */
 
 /* タイトル（英会話・勉強サポート） */
 .service-box h2 {
@@ -107,7 +108,7 @@ nav ul {
     font-size: 2.5rem; /* 文字サイズを大きく */
 }
 
-/* 動画エリアを大きくする */
+/* 動画エリア */
 .video-container {
     background: #000;
     color: #fff;
@@ -116,7 +117,7 @@ nav ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 20px 0;
+    margin: 20px 0 20px auto;
     cursor: pointer;
 }
 
