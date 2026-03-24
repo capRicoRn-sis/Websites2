@@ -88,14 +88,34 @@ nav ul {
 
 
 /* タイトル（英会話・勉強サポート） */
-.service-box{
+.service-box {
+    width: 95%;
+    max-width: 1000px;
+    padding: 80px 40px 40px; /* 上の余白を大きくして、タイトルが入る隙間を作る */
+    margin-bottom: 80px;
+    background: #fff;
+    position: relative; /* これが重要！タイトルの基準点になります */
+    
+    /* もし overflow: hidden; があったら削除するか、visible に書き換えてください */
+    overflow: visible; 
+    
+    border: 3px solid #333;
+    box-shadow: 15px 15px 0 0 #333;
+}
+
+/* タイトル（英会話・勉強サポート）を枠の上に重ねる */
+.service-box h2 {
     position: absolute;
-    top: -45px; /* ボックスの上へ移動 */
-    left: 20px;
+    top: -30px;    /* ボックスの枠線の上に少し乗るように調整 */
+    left: 30px;
     margin: 0;
-    padding: 5px 20px;
-    background: #fff; /* 背景を白にして枠線と重なっても読めるように */
-    font-size: 2.5rem; /* 文字サイズを大きく */
+    padding: 10px 30px;
+    background: #fff; /* 背景を白にして下の枠線を隠す */
+    font-size: 2rem;
+    border: 3px solid #333;
+    z-index: 10;   /* 他の要素より上に表示させる */
+    color: #333;   /* 文字色を確認 */
+    display: block; /* 確実に表示させる */
 }
 
 /* 動画エリア */
