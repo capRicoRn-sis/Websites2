@@ -96,7 +96,7 @@ nav ul {
     position: relative;
 }
 
-/* タイトル（英会話・勉強サポート）を枠の外へ */
+/* タイトル（英会話・勉強サポート） */
 .service-box h2 {
     position: absolute;
     top: -45px; /* ボックスの上へ移動 */
@@ -105,15 +105,14 @@ nav ul {
     padding: 5px 20px;
     background: #fff; /* 背景を白にして枠線と重なっても読めるように */
     font-size: 2.5rem; /* 文字サイズを大きく */
-    border: 3px solid #333;
 }
 
 /* 動画エリアを大きくする */
 .video-container {
     background: #000;
     color: #fff;
-    width: 100%;
-    height: 500px; /* 高さを大きく */
+    width: 80%;
+    height: 600px; /* 高さを大きく */
     display: flex;
     align-items: center;
     justify-content: center;
