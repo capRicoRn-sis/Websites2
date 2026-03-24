@@ -108,7 +108,11 @@ nav ul {
     border: 3px solid #333;
     box-shadow: 15px 15px 0 0 #333;
     
-   
+    /* ★横並びの設定 */
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start; /* タイトルと動画の上端を揃える */
+    gap: 50px;               /* タイトルと動画の間の距離 */
 }
 
 .service-box .title-group {
