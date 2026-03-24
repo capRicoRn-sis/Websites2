@@ -88,7 +88,7 @@ nav ul {
 
 
 /* タイトル（英会話・勉強サポート） */
-.service-box h2 {
+.service-box{
     position: absolute;
     top: -45px; /* ボックスの上へ移動 */
     left: 20px;
