@@ -50,13 +50,24 @@ nav ul {
 }
 
 /* 画像を包む「窓」の設定 */
-.slide-box-left, .slide-box-right {
+.slide-box-left {
     position: relative; /* 子要素の基準点になる */
     width: 45%;         /* 窓の横幅 */
     height: 400px;      /* 窓の高さ */
     overflow: hidden;   /* 窓からはみ出た画像を隠す */
     border-radius: 10px; /* 角を少し丸くすると綺麗です */
     background: #eee;   /* 画像読み込み前の背景色 */
+}
+
+.slide-box-right {
+    position: relative; /* 子要素の基準点になる */
+    width: 20%;         /* 窓の横幅 */
+    height: 400px;      /* 窓の高さ */
+    overflow: hidden;   /* 窓からはみ出た画像を隠す */
+    border-radius: 10px; /* 角を少し丸くすると綺麗です */
+    background: #eee;   /* 画像読み込み前の背景色 */
+
+    margin-top: 80px;
 }
 
 /* スライドショー画像の共通設定 */
