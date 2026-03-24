@@ -44,7 +44,7 @@ nav ul {
     display: flex;
     align-items: center; /* 中央に揃える */
     justify-content: center;
-    gap: 30px;
+    gap: 60px;
     padding: 60px 5%;
     height: 500px;
 }
