@@ -152,16 +152,6 @@ nav ul {
     background: #fdfdfd;
 }
 
-.video-container {
-    background: #000;
-    color: #fff;
-    height: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 15px 0;
-    cursor: pointer;
-}
 
 /* メッセージセクション [cite: 18-26] */
 .message {
