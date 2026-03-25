@@ -282,7 +282,7 @@ nav ul {
 
 
 /* --- ボタン・リンク --- */
-.btn .note-link {
+.note-link, .btn {
     display: inline-block;    /* 枠のサイズを文字に合わせる */
     padding: 15px 30px;       /* 枠内の上下左右の余白 */
     color: #333;              /* 文字色 */
