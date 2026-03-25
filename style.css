@@ -227,10 +227,10 @@ nav ul {
 
 .map-container {
     flex: 1;              /* 残りのスペースをすべて使う */
-    height: 400px;        /* 地図の高さを指定 */
+    height: 300px;        /* 地図の高さを指定 */
     margin: 0;            /* margin: auto を解除して右に配置 */
-    border: 3px solid #333;
-    border-radius: 15px;
+    border: 2px solid #333;
+    border-radius: 0px;
     overflow: hidden;
 }
 
