@@ -179,55 +179,74 @@ nav ul {
 }
 
 /* --- アドレスセクション ---  */
+/* 外側の大きな枠（幅の制限を広げます） */
 .address-box {
     margin: 40px auto;
-    padding: 30px;
-    max-width: 800px;
-    text-align: center; /* 基本は中央揃え */
+    padding: 0;           /* 内側のコンテナで制御するので0に */
+    max-width: 1200px;    /* 1100pxのコンテナが入るように広げる */
+    text-align: center;
 }
 
+/* ★横並びを実現するメインコンテナ */
 .address-flex-container {
     display: flex;
     justify-content: space-between;
-    align-items: center; /* 上下中央で揃える */
-    gap: 40px;           /* 文字と地図の間の隙間 */
+    align-items: center;  /* 上下中央揃え */
+    gap: 60px;            /* 文字と地図の間の隙間を少し広めに */
     max-width: 1100px;
     margin: 0 auto;
     padding: 40px 5%;
-    text-align: left;    /* 中身を左寄せに */
 }
 
-/* 左側：テキストエリアの幅 */
+/* 左側：テキストエリア */
 .address-text {
-    flex: 0 0 40%;       /* 全体の40%の幅 */
-    text-align: left;    /* すべて左寄せに固定 */
-    display: flex;       /* 縦に並べるためのFlexbox */
+    flex: 0 0 40%;        /* 全体の40%の幅を確保 */
+    text-align: left;     /* 文字を左寄せ */
+    display: flex;
     flex-direction: column;
-    justify-content: center;       /* 全体の40%の幅を確保 */
 }
 
 .address-text h3 {
-    font-size: 2.5rem;   /* 大きく左寄せ */
+    font-size: 2.8rem;    /* Adressを強調 */
     margin: 0 0 10px 0;
+    line-height: 1.1;
 }
 
 .city-name {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: bold;
     margin: 0;
+    text-align: left;
 }
 
+/* ★右側：地図エリア（ここをしっかり設定します） */
 .map-container {
-    margin: 20px auto;
+    flex: 1;              /* 残りのスペースをすべて使う */
+    height: 400px;        /* 地図の高さを指定 */
+    margin: 0;            /* margin: auto を解除して右に配置 */
+    border: 3px solid #333;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 10px 10px 0 0 #333; /* サービスボックスとお揃いの影 */
 }
 
+/* 地図自体のサイズ */
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* レスポンシブ対応 */
 @media (max-width: 768px) {
     .address-flex-container {
         flex-direction: column;
         align-items: flex-start;
+        gap: 30px;
     }
     .address-text, .map-container {
         width: 100%;
+        flex: none;       /* 幅指定を解除 */
     }
 }
 
