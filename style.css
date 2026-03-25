@@ -111,7 +111,7 @@ nav ul {
     /* ★横並びの設定 */
     display: flex;
     justify-content: space-between; 
-    align-items: flex-start; /* タイトルと動画の上端を揃える */
+    align-items: flex-start; 
     gap: 50px;               /* タイトルと動画の間の距離 */
 }
 
@@ -208,7 +208,7 @@ nav ul {
 .address-text p:not(.city-name):not(.en-sub) {
     margin-top: 40px;    /* ここを大きくすると、上の住所との間が空く */
     font-size: 1rem;
-    line-height: 1.8;    /* 行間も少し広げると読みやすくなります */
+    line-height: 2.0;    /* 行間も少し広げると読みやすくなります */
     color: #555;         /* 少し色を薄くすると、Adressがより目立ちます */
 }
 
