@@ -205,6 +205,13 @@ nav ul {
     flex-direction: column;
 }
 
+.address-text p:not(.city-name):not(.en-sub) {
+    margin-top: 40px;    /* ここを大きくすると、上の住所との間が空く */
+    font-size: 1rem;
+    line-height: 1.8;    /* 行間も少し広げると読みやすくなります */
+    color: #555;         /* 少し色を薄くすると、Adressがより目立ちます */
+}
+
 .address-text h3 {
     font-size: 2.8rem;    /* Adressを強調 */
     margin: 0 0 10px 0;
