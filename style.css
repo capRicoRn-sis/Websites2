@@ -159,7 +159,6 @@ nav ul {
 
 
 
-
 /* --- メッセージセクション --- */
 .message {
     padding: 60px 10%;
@@ -177,6 +176,35 @@ nav ul {
     margin-left: 50%;
     padding-top: 10px;
     line-height: normal;
+}
+
+/* --- アドレスセクション ---  */
+.address-box {
+    margin: 40px auto;
+    padding: 30px;
+    max-width: 800px;
+    text-align: center; /* 基本は中央揃え */
+}
+
+.address-box h3 {
+    font-size: 2.2rem;    /* 文字を大きく（お好みで調整） */
+    text-align: left;     /* 左寄せにする */
+    margin: 0 0 10px 0;   /* 下の文字との隙間 */
+    padding-left: 5%;     /* 少しだけ左に余白を持たせると綺麗です */
+    color: #333;
+    display: block;       /* 横幅いっぱいの領域を確保して左寄せを確実にする */
+}
+
+/* その下の住所（pタグ）や英語サブタイトルも左に寄せたい場合 */
+.address-box p, 
+.address-box .en-sub {
+    text-align: left;
+    padding-left: 5%;
+}
+
+/* 地図の枠などは中央のままでもオシャレです */
+.map-placeholder {
+    margin: 20px auto;
 }
 
 
@@ -207,28 +235,8 @@ nav ul {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* ボタン・リンク */
-.btn {
-    display: inline-block;    /* 枠のサイズを文字に合わせる */
-    padding: 15px 30px;       /* 枠内の上下左右の余白 */
-    color: #333;              /* 文字色 */
-    text-decoration: none;    /* 下線を消す */
-    font-weight: bold;
-    
-    /* 1. 角を丸くした枠 */
-    border: 2px solid #333;   /* 2pxの太さの黒い枠線 */
-    border-radius: 50px;      /* 大きめの値にするとカプセル型になります */
-    background-color: #fff;   /* 背景は白 */
-
-    /* 2. 右下の薄い影 */
-    /* 5px(右) 5px(下) 10px(ぼかし) rgba(黒, 透明度0.1) */
-    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.1); 
-
-    transition: all 0.3s;     /* 動いた時のアニメーションを滑らかに */
-    margin: 20px 0;           /* 前後の要素との間隔 */
-}
-
-.note-link {
+/* --- ボタン・リンク --- */
+.btn .note-link {
     display: inline-block;    /* 枠のサイズを文字に合わせる */
     padding: 15px 30px;       /* 枠内の上下左右の余白 */
     color: #333;              /* 文字色 */
