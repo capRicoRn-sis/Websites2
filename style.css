@@ -195,8 +195,7 @@ nav ul {
     display: block;       /* 横幅いっぱいの領域を確保して左寄せを確実にする */
 }
 
-/* その下の住所（pタグ）や英語サブタイトルも左に寄せたい場合 */
-.address-box p, 
+/* その下の住所（pタグ）や英語サブタイトルも左に寄せたい場合 */ 
 .address-box .en-sub {
     text-align: left;
     padding-left: 5%;
