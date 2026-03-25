@@ -187,7 +187,6 @@ nav ul {
     text-align: center;
 }
 
-/* ★横並びを実現するメインコンテナ */
 .address-flex-container {
     display: flex;
     justify-content: space-between;
@@ -219,7 +218,6 @@ nav ul {
     text-align: left;
 }
 
-/* ★右側：地図エリア（ここをしっかり設定します） */
 .map-container {
     flex: 1;              /* 残りのスペースをすべて使う */
     height: 400px;        /* 地図の高さを指定 */
@@ -227,7 +225,6 @@ nav ul {
     border: 3px solid #333;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 10px 10px 0 0 #333; /* サービスボックスとお揃いの影 */
 }
 
 /* 地図自体のサイズ */
