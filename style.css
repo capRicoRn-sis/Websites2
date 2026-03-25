@@ -282,6 +282,7 @@ nav ul {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
+
 /* --- ボタン・リンク --- */
 .btn .note-link {
     display: inline-block;    /* 枠のサイズを文字に合わせる */
