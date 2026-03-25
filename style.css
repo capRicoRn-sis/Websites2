@@ -199,7 +199,11 @@ nav ul {
 
 /* 左側：テキストエリアの幅 */
 .address-text {
-    flex: 0 0 40%;       /* 全体の40%の幅を確保 */
+    flex: 0 0 40%;       /* 全体の40%の幅 */
+    text-align: left;    /* すべて左寄せに固定 */
+    display: flex;       /* 縦に並べるためのFlexbox */
+    flex-direction: column;
+    justify-content: center;       /* 全体の40%の幅を確保 */
 }
 
 .address-text h3 {
@@ -213,7 +217,6 @@ nav ul {
     margin: 0;
 }
 
-/* 地図の枠などは中央のままでもオシャレです */
 .map-container {
     margin: 20px auto;
 }
