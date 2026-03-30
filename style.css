@@ -345,7 +345,33 @@ nav ul li.active {
 
 
 /* --- ボタン・リンク --- */
-.note-link, .btn {
+.note-link {
+    display: inline-block;    /* 枠のサイズを文字に合わせる */
+    padding: 15px 30px;       /* 枠内の上下左右の余白 */
+    color: #3e3a35;              /* 文字色 */
+    text-decoration: none;    /* 下線を消す */
+    font-weight: bold;
+    
+    /* 1. 角を丸くした枠 */
+    border: 2px solid #3e3a35;   /* 2pxの太さの黒い枠線 */
+    border-radius: 50px;      /* 大きめの値にするとカプセル型になります */
+    background-color: #fff;   /* 背景は白 */
+
+    /* 2. 右下の薄い影 */
+    /* 5px(右) 5px(下) 10px(ぼかし) rgba(黒, 透明度0.1) */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1); 
+
+    transition: all 0.3s;     /* 動いた時のアニメーションを滑らかに */
+    margin: 20px 0;           /* 前後の要素との間隔 */
+}
+
+.note-link:hover {
+    transform: translateY(-2px); /* 少し上に浮く */
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.15); /* 影を少し濃く */
+    background-color: #f9f9f9;   /* ほんのりグレーに */
+}
+
+.btn {
     display: inline-block;    /* 枠のサイズを文字に合わせる */
     padding: 15px 30px;       /* 枠内の上下左右の余白 */
     color: #333;              /* 文字色 */
@@ -365,11 +391,6 @@ nav ul li.active {
     margin: 20px 0;           /* 前後の要素との間隔 */
 }
 
-.note-link:hover {
-    transform: translateY(-2px); /* 少し上に浮く */
-    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.15); /* 影を少し濃く */
-    background-color: #f9f9f9;   /* ほんのりグレーに */
-}
 .en-sub {
     font-size: 0.8rem;
     color: #888;
