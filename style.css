@@ -37,22 +37,29 @@ nav ul {
     margin: 0;
 }
 
+nav ul li a {
+    text-decoration: none; /* 下線を消す */
+    color: inherit;        /* 親(li)の文字色をそのまま使う */
+    display: block;        /* クリックできる範囲を広げる */
+}
+
 nav ul li {
     font-size: 1rem;
     font-weight: bold;      /* 全て太字 */
-    color: #999;           /* 基本はグレー */
+    color: #999;           /* 基本はグレー（未訪問・訪問済み関係なく） */
     cursor: pointer;
-    transition: color 0.3s; /* 色が変わる時のアニメーション */
+    transition: color 0.3s;
 }
 
-/* ホバーした時に少し濃くする（お好みで） */
+/* ホバー時の設定 */
 nav ul li:hover {
     color: #666;
 }
 
-/* ★現在いるページ（黒） */
+/* 現在いるページ（active）の設定 */
 nav ul li.active {
-    color: #000;           /* 今いるページはパキッと黒 */
+    color: #000;           /* 優先的に黒になる */
+    border-bottom: 2px solid #000; /* 下線が欲しい場合はここ（文字の下線ではなく枠線の装飾） */
     padding-bottom: 2px;
 }
 
