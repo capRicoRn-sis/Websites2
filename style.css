@@ -58,14 +58,32 @@ nav ul li.active {
 
 /* --- スライドショーエリアの親コンテナ ---  */
 .hero-slideshow {
-    background: #f0ffff;
     display: flex;
     align-items: center; /* 中央に揃える */
     justify-content: center;
     gap: 60px;
     padding: 60px 5%;
     height: 500px;
+    position: relative; 
+    overflow: hidden;  
 }
+.hero-background {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;        
+}
+
+.bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    filter: blur(30px) brightness(0.9); 
+    transform: scale(1.1); 
+}
+
 .slide-box-left {
     position: relative; /* 子要素の基準点になる */
     width: 45%;         /* 窓の横幅 */
@@ -73,6 +91,7 @@ nav ul li.active {
     overflow: hidden;   /* 窓からはみ出た画像を隠す */
     border-radius: 10px; /* 角を少し丸くすると綺麗です */
     background: #eee;   /* 画像読み込み前の背景色 */
+    z-index: 5;
 }
 
 .slide-box-right {
@@ -84,7 +103,9 @@ nav ul li.active {
     background: #eee;   /* 画像読み込み前の背景色 */
 
     margin-top: 80px;
+    z-index: 5;
 }
+
 .slide-img {
     position: absolute;
     top: 0;
