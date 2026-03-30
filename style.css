@@ -33,9 +33,27 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
-    gap: 15px;
-    font-size: 0.9rem;
+    gap: 25px;
     margin: 0;
+}
+
+nav ul li {
+    font-size: 1rem;
+    font-weight: bold;      /* 全て太字 */
+    color: #999;           /* 基本はグレー */
+    cursor: pointer;
+    transition: color 0.3s; /* 色が変わる時のアニメーション */
+}
+
+/* ホバーした時に少し濃くする（お好みで） */
+nav ul li:hover {
+    color: #666;
+}
+
+/* ★現在いるページ（黒） */
+nav ul li.active {
+    color: #000;           /* 今いるページはパキッと黒 */
+    padding-bottom: 2px;
 }
 
 /* --- スライドショーエリアの親コンテナ ---  */
