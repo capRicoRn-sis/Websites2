@@ -403,3 +403,130 @@ nav ul li.active {
     color: #888;
     margin-top: -10px;
 }
+
+/* =============================================
+   プロフィールページ専用：サブ講師 (Sub Coaches)
+   ============================================= */
+/* セクション全体：メッセージセクションと同じベージュ背景を流用 */
+.sub-coaches {
+    padding: 80px 10%;
+    background-color: #eadbb1; /* メッセージセクションと同じベージュ */
+    
+    /* 切り抜かれたような奥行き（メッセージセクションと同じ設定） */
+    border-top: 1px solid rgba(0,0,0,0.05);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    box-shadow: inset 0 20px 50px rgba(139, 121, 94, 0.15);
+    
+    position: relative;
+    z-index: 5;
+    text-align: center;
+}
+
+/* タイトル設定 */
+.sub-coaches h2 {
+    font-size: 2.2rem;
+    color: #2f4f4f; /* 統一色 */
+    margin: 0;
+}
+
+.sub-coaches .en-sub {
+    font-size: 1rem;
+    color: #8b4513; /* ハイライト色を流用 */
+    margin: 5px 0 50px 0;
+}
+
+/* --- 横並びにするコンテナ --- */
+.sub-flex-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* カード同士の隙間 */
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* --- サブ講師カード（1名分） --- */
+.sub-coach-card {
+    flex: 1; /* 残りのスペースを均等に使う */
+    background: rgba(255, 255, 255, 0.6); /* 白背景を少し透過させてベージュに馴染ませる */
+    padding: 30px;
+    border-radius: 15px;
+    
+    /* 幼稚すぎない、ごく薄いマットな影（テック感を消す） */
+    border: 2px solid rgba(62, 58, 53, 0.1); /* 深い茶色の極薄い枠 */
+    box-shadow: 6px 6px 12px rgba(139, 121, 94, 0.1); 
+    
+    /* カード内も横並びにする（写真左、説明右） */
+    display: flex;
+    align-items: center; /* 上下中央揃え（お好みでflex-startに） */
+    gap: 20px;
+    text-align: left; /* 文字は左寄せ */
+}
+
+/* --- 左側：○枠の写真 --- */
+.sub-photo-box {
+    flex: 0 0 120px; /* ★大きすぎない（120px）に固定 */
+    height: 120px; /* ★高さを同じにして正方形に */
+    
+    /* ★ここがポイント：丸枠にする */
+    border-radius: 50%;
+    overflow: hidden;
+    
+    /* メイン講師とお揃いの枠（少し細めに） */
+    border: 2px solid #333;
+}
+
+.sub-photo-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 歪まないように */
+}
+
+/* --- 右側：説明文エリア --- */
+.sub-info-box {
+    flex: 1; /* 残りのスペースをすべて使う */
+}
+
+.sub-info-box h3 {
+    font-size: 1.3rem;
+    color: #3e3a35; /* 本文と同じ深い茶色 */
+    margin: 0;
+}
+
+.sub-info-box .tags {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #8b4513; /* シャンパンゴールド系を流用 */
+    margin: 3px 0 10px 0;
+}
+
+.sub-desc {
+    font-size: 0.95rem;
+    line-height: 1.8; /* 行間をゆったりさせて読みやすく */
+    color: #555;
+    margin: 0;
+}
+
+/* --- レレスポンシブ対応（スマホ） --- */
+@media (max-width: 768px) {
+    .sub-flex-container {
+        flex-direction: column; /* タテ並び */
+        gap: 20px;
+    }
+    
+    .sub-coach-card {
+        padding: 20px;
+        flex-direction: column; /* カード内もタテ並びに（中央揃え） */
+        text-align: center;
+    }
+    
+    .sub-photo-box {
+        flex: 0 0 100px; /* 写真を少し小さく */
+        height: 100px;
+    }
+    
+    .sub-info-box {
+        text-align: center;
+    }
+}
+
