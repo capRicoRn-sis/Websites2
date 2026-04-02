@@ -529,6 +529,7 @@ nav ul li.active {
     margin-top: 0;
     margin-bottom: 40px;
     display: block;
+    text-align: center;
 }
 
 /* --- 横並びにするコンテナ --- */
