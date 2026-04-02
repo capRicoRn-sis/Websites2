@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tama’s Lab.</title>
+    <title>講師Profile | Tama’s Lab.</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,38 +15,23 @@
                 <li><a href="index.html">Top</a></li>
                 <li><a href="profile.html">講師Profile</a></li>
                 <li><a href="https://note.com/cheerful_bunny">Note</a></li>
-                <li><a href="kosen.html">高専生へ</a></li>
-                 <li class="active">料金目安</li>
+                <li><a href="kousen.html">高専生へ</a></li>
+                <li class="active">料金目安</li>
                 <li><a href="soudan.html">ご相談</a></li>
             </ul>
         </nav>
     </header>
-
+  
     <main>
-       
+     
+        
+        <section class="links-access">
+            <div class="cta-buttons">
+                <a href="index.html" class="btn">Topへ戻る</a>
+                <a href="#" class="btn">ご相談はこちら ▷</a>
+            </div>
+        </section> 
     </main>
 
-    <script>
-    function startSlideshow(containerId) {
-        const container = document.getElementById(containerId);
-        const images = container.getElementsByClassName('slide-img');
-        let currentIndex = 0;
-
-        setInterval(() => {
-            // 現在の画像から active クラスを外す
-            images[currentIndex].classList.remove('active');
-            
-            // 次の画像のインデックスを計算
-            currentIndex = (currentIndex + 1) % images.length;
-            
-            // 次の画像に active クラスをつける
-            images[currentIndex].classList.add('active');
-        }, 3000); // 3000ミリ秒 = 3秒 
-    }
-
-    // 左と右、それぞれのスライドショーを開始
-    startSlideshow('slideshow-left');
-    startSlideshow('slideshow-right');
-</script>
 </body>
 </html>
