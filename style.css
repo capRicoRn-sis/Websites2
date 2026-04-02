@@ -407,7 +407,87 @@ nav ul li.active {
 /* =============================================
    プロフィールページ専用：サブ講師 (Sub Coaches)
    ============================================= */
-/* セクション全体：メッセージセクションと同じベージュ背景を流用 */
+.profile-hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.profile-hero-background .bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* ★修正：blur(15px) を削除して 0 に */
+    filter: blur(0px) brightness(0.9); 
+    transform: scale(1.0); /* ぼかしを消すので拡大も不要 */
+}
+
+/* ★追加：写真の上に薄いベージュを重ねて文字を読みやすくする */
+.profile-hero-background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(244, 241, 234, 0.4); /* 背景写真が少し透ける程度 */
+}
+
+/* --- メイン講師のレイアウト設定（追加） --- */
+.profile-flex-container {
+    display: flex;
+    align-items: stretch; /* 写真とボックスの高さを揃える */
+    justify-content: center;
+    gap: 40px;
+    max-width: 1100px;
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+}
+
+/* 左側：大きな正方形写真 */
+.profile-photo-box {
+    flex: 0 0 400px; /* 横幅を400pxに固定 */
+    height: 400px;   /* 高さを400pxに固定（正方形） */
+    border-radius: 15px;
+    overflow: hidden;
+    border: 3px solid #333;
+    box-shadow: 15px 15px 0 0 #333;
+}
+
+.profile-photo-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 右側：説明テキストボックス */
+.profile-info-box {
+    flex: 1;
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    border: 3px solid #333;
+    box-shadow: 15px 15px 0 0 #333;
+    text-align: left;
+}
+
+.profile-info-box h2 {
+    font-size: 2.5rem;
+    margin: 10px 0;
+    color: #2f4f4f;
+}
+
+.profile-text p {
+    font-size: 1.05rem;
+    line-height: 2.0;
+    color: #444;
+}
+
 .sub-coaches {
     padding: 80px 10%;
     background-color: #eadbb1; /* メッセージセクションと同じベージュ */
