@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tama’s Lab.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="site-title">Tama’s Lab.</div>
+        <nav>
+            <ul>
+                <li class="active">Top</li>
+                <li><a href="profile.html">講師Profile</a></li>
+                <li><a href="https://note.com/cheerful_bunny">Note</a></li>
+                <li><a href="kosen.html">高専生へ</a></li>
+                 <li><a href="ryoukin.html">料金目安</a></li>
+                <li><a href="soudan.html">ご相談</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+       
+    </main>
+
+    <script>
+    function startSlideshow(containerId) {
+        const container = document.getElementById(containerId);
+        const images = container.getElementsByClassName('slide-img');
+        let currentIndex = 0;
+
+        setInterval(() => {
+            // 現在の画像から active クラスを外す
+            images[currentIndex].classList.remove('active');
+            
+            // 次の画像のインデックスを計算
+            currentIndex = (currentIndex + 1) % images.length;
+            
+            // 次の画像に active クラスをつける
+            images[currentIndex].classList.add('active');
+        }, 3000); // 3000ミリ秒 = 3秒 
+    }
+
+    // 左と右、それぞれのスライドショーを開始
+    startSlideshow('slideshow-left');
+    startSlideshow('slideshow-right');
+</script>
+</body>
+</html>
