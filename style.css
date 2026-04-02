@@ -503,7 +503,7 @@ nav ul li.active {
 }
 
 .sub-coaches {
-    padding: 80px 10%;
+    padding: 60px 10%;
     background-color: #eadbb1; /* メッセージセクションと同じベージュ */
     
     /* 切り抜かれたような奥行き（メッセージセクションと同じ設定） */
@@ -526,7 +526,9 @@ nav ul li.active {
 .sub-coaches .en-sub {
     font-size: 1rem;
     color: #8b4513; /* ハイライト色を流用 */
-    margin: 5px 0 50px 0;
+    margin-top: 0;
+    margin-bottom: 40px;
+    display: block;
 }
 
 /* --- 横並びにするコンテナ --- */
