@@ -523,7 +523,7 @@ nav ul li.active {
     margin: 0;
 }
 
-.sub-coaches .en-sub {
+.sub {
     font-size: 1rem;
     color: #8b4513; /* ハイライト色を流用 */
     margin-top: 0;
