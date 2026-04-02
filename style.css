@@ -409,11 +409,11 @@ nav ul li.active {
    ============================================= */
 .profile-hero {
     background-color: #ffffff; /* 完全な白地 */
-    padding: 40px 5%;
+    padding: 40px 5%　80px 5%;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 450px;
+    min-height: 400px;
 }
 
 .profile-hero-background {
