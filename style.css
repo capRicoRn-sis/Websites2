@@ -467,8 +467,6 @@ nav ul li.active {
     height: 400px;   /* 高さを400pxに固定（正方形） */
     border-radius: 15px;
     overflow: hidden;
-    border: 3px solid #333;
-    box-shadow: 15px 15px 0 0 #333;
 }
 
 .profile-photo-box {
@@ -486,8 +484,6 @@ nav ul li.active {
     background: #fff; 
     padding: 40px;
     border-radius: 15px;
-    border: 3px solid #333;
-    box-shadow: 15px 15px 0 0 #333;
     text-align: left;
 }
 
