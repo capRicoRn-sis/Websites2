@@ -327,36 +327,65 @@ nav ul li.active {
    高専生セクション
    ============================================= */
 .kosen-top-section {
-    background: #eef7ff;
-    padding: 60px 10%;
-    margin-top: 40px;
+    background-color: #fff;
+    text-align: center;
 }
 
-.kosen-top-section h2 {
-    color: #004a99;
-    font-size: 1.8rem;
+.kosen-intro-box {
+    background-color: #eef7ff; /* 元の高専セクションの色 */
+    padding: 100px 5% 120px 5%;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+.kosen-flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.kosen-text-area {
+    flex: 1;
     text-align: left;
-    margin-top: 30px;
 }
 
-.item {
+.kosen-catch {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #004a99; /* 元の濃い青 */
+    margin-bottom: 10px;
+}
+
+.kosen-title {
+    font-size: 3rem;
+    color: #004a99;
+    font-family: serif;
+    margin: 0 0 30px 0;
+    line-height: 1.2;
+}
+
+/* ★図形：右上が欠けたメッセージボックス */
+.kosen-message-box {
     background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 40px;
+    line-height: 1.8;
+    color: #444;
+    border-radius: 40px 0 40px 40px;
+    
+    /* ★clip-path：右上の切り欠きを定義 */
+    clip-path: polygon(0% 0%, 88% 0%, 100% 12%, 100% 100%, 0% 100%);
+    
+    margin-bottom: 30px;
+    font-size: 1rem;
 }
 
+/* 特徴リスト */
 .kosen-features {
     list-style: none;
     padding: 0;
     margin: 20px 0 0 0;
-    border-top: 1px dashed #004a99; /* 区切り線 */
+    border-top: 1px dashed #004a99;
     padding-top: 15px;
 }
 
@@ -378,14 +407,147 @@ nav ul li.active {
     color: #004a99;
 }
 
-
-
-/* タイトルのフォントサイズ微調整（2段になるのを想定） */
-.kosen-title {
-    font-size: 2.8rem; /* 少し小さくしてバランス調整 */
-    line-height: 1.2;
+/* 写真フレーム（長方形） */
+.kosen-photo-frame {
+    width: 380px;
+    height: 520px;
+    border-radius: 40px;
+    overflow: hidden;
+    background: #ddd;
 }
 
+.kosen-photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* --- 下部：Announcements エリア --- */
+.kosen-announcements {
+    padding: 100px 5%;
+    background-color: #fff;
+}
+
+.ann-title {
+    font-size: 3.2rem;
+    color: #333;
+    margin-bottom: 60px;
+    font-family: serif;
+}
+
+.ann-grid {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto 50px auto;
+}
+
+/* ★図形：右上が欠けたカード */
+.ann-card {
+    flex: 1;
+    padding: 50px 30px;
+    border-radius: 40px;
+    color: #fff;
+    text-align: left;
+    
+    /* ★clip-path：右上の切り欠きを定義 */
+    clip-path: polygon(0% 0%, 75% 0%, 100% 15%, 100% 100%, 0% 100%);
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.ann-icon {
+    width: 55px;
+    height: 55px;
+    background: #fff;
+    color: #333;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+    border: 1px solid #333;
+}
+
+.ann-header {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    line-height: 1.1;
+    min-height: 5rem;
+}
+
+.ann-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.ann-hr {
+    border: none;
+    border-top: 2px solid rgba(0,0,0,0.15);
+    margin: 30px 0;
+}
+
+.ann-footer {
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: auto;
+}
+
+/* カードの色設定（画像に近いパステル系） */
+.card-orange { background-color: #ff854d; }
+.card-purple { background-color: #c9b3ff; }
+.card-green  { background-color: #7dcfb6; }
+
+/* 共通パーツ */
+.back-to-top-small {
+    display: inline-block;
+    border: 1.5px solid #333;
+    border-radius: 20px;
+    padding: 6px 18px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
+
+/* ボタン */
+.kosen-btn-container {
+    margin-top: 40px;
+}
+
+.note-button {
+    display: inline-block;
+    padding: 18px 50px;
+    background-color: #004a99;
+    color: #fff !important;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 74, 153, 0.2);
+}
+
+.note-button:hover {
+    background-color: #003366;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 74, 153, 0.3);
+}
+
+
+
+/* スマホ対応 */
+@media (max-width: 900px) {
+    .kosen-flex-container, .ann-grid {
+        flex-direction: column;
+    }
+    .kosen-photo-frame { width: 100%; height: auto; aspect-ratio: 3/4; }
+    .ann-card { width: 100%; min-height: auto; }
+}
 
 /* --- ボタン・リンク --- */
 .note-link {
