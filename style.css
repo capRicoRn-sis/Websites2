@@ -378,6 +378,8 @@ nav ul li.active {
     color: #004a99;
 }
 
+
+
 /* タイトルのフォントサイズ微調整（2段になるのを想定） */
 .kosen-title {
     font-size: 2.8rem; /* 少し小さくしてバランス調整 */
