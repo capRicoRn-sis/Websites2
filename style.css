@@ -323,14 +323,16 @@ nav ul li.active {
 }
 
 
-/* --- 高専生セクション --- */
-.kosen-special {
+/* =============================================
+   高専生セクション
+   ============================================= */
+.kosen-top-section {
     background: #eef7ff;
     padding: 60px 10%;
     margin-top: 40px;
 }
 
-.kosen-special h2 {
+.kosen-top-section h2 {
     color: #004a99;
     font-size: 1.8rem;
 }
@@ -348,6 +350,38 @@ nav ul li.active {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.kosen-features {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0 0;
+    border-top: 1px dashed #004a99; /* 区切り線 */
+    padding-top: 15px;
+}
+
+.kosen-features li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.kosen-features li span {
+    color: #004a99;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.kosen-features li strong {
+    color: #004a99;
+}
+
+/* タイトルのフォントサイズ微調整（2段になるのを想定） */
+.kosen-title {
+    font-size: 2.8rem; /* 少し小さくしてバランス調整 */
+    line-height: 1.2;
 }
 
 
