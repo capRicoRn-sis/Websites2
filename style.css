@@ -331,11 +331,6 @@ nav ul li.active {
     padding: 0;
 }
 
-.kosen-container {
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
 /* --- 上部メッセージエリア --- */
 .kosen-intro-blue {
     background-color: #004a99; /* 濃い青背景 */
@@ -345,8 +340,10 @@ nav ul li.active {
     text-align: left;
 }
 
-.kosen-header {
-    margin-bottom: 25px;
+.kosen-inner {
+    max-width: 1100px; /* ここでコンテンツの幅を決める */
+    margin: 0 auto;    /* 中央寄せ */
+    padding: 0 5%;     /* スマホ時の左右余白 */
 }
 
 .kosen-catch {
