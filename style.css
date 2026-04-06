@@ -340,10 +340,8 @@ nav ul li.active {
 .kosen-intro-blue {
     background-color: #004a99; /* 濃い青背景 */
     color: #fff;              /* 基本文字色白 */
-    padding: 80px 10%;
-    border-radius: 0;
-    margin-top: 20px;
-    position: relative;
+    padding: 80px 0;
+    width: 100%;
     text-align: left;
 }
 
