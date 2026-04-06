@@ -335,15 +335,38 @@ nav ul li.active {
 .kosen-intro-blue {
     background-color: #004a99; /* 濃い青背景 */
     color: #fff;              /* 基本文字色白 */
-    padding: 80px 0;
+    padding: 120px 0 80px 0;
     width: 100%;
     text-align: left;
+    position: relative;
+    overflow: hidden;
+}
+.kosen-intro-blue::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px; /* グラデーションの高さ */
+    /* 画像にある、青い帯が複数重なり、上に行くほど薄くなる効果 */
+    background: linear-gradient(to bottom,
+        rgba(0, 74, 153, 0) 0%,
+        rgba(0, 74, 153, 0) 50px, /* 1本目の青（濃い） */
+        rgba(0, 74, 153, 0.6) 50px, /* 2本目の青（薄い） */
+        rgba(0, 74, 153, 0.6) 70px,
+        rgba(0, 74, 153, 0.3) 70px, /* 3本目の青（もっと薄い） */
+        rgba(0, 74, 153, 0.3) 90px,
+        rgba(0, 74, 153, 0.1) 90px, /* 4本目の青（さらに薄い） */
+        rgba(0, 74, 153, 0.1) 100%);
+    opacity: 0.8; /* 全体の透明度調整 */
 }
 
 .kosen-inner {
     max-width: 1100px; /* ここでコンテンツの幅を決める */
     margin: 0 auto;    /* 中央寄せ */
     padding: 0 5%;     /* スマホ時の左右余白 */
+    position: relative;
+    z-index: 1;
 }
 
 .kosen-catch {
@@ -380,7 +403,11 @@ nav ul li.active {
     flex: 1;
 }
 
-.kosen-lines div:nth-child(1) { background-color: #fff; } /* 1本目を濃く */
+.kosen-lines div:nth-child(1) { background-color: #fff; } /* 1本目：純白 */
+.kosen-lines div:nth-child(2) { background-color: rgba(0, 74, 153, 0.8); } /* 2本目：濃い青 */
+.kosen-lines div:nth-child(3) { background-color: rgba(0, 74, 153, 0.6); } /* 3本目：中くらいの青 */
+.kosen-lines div:nth-child(4) { background-color: rgba(0, 74, 153, 0.4); } /* 4本目：薄い青 */
+.kosen-lines div:nth-child(5) { background-color: rgba(0, 74, 153, 0.2); } /* 5本目：とても薄い青 */
 
 .kosen-body-text {
     line-height: 1.8;
