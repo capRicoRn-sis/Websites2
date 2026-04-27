@@ -187,26 +187,42 @@ nav ul li.active {
     margin:0;
 }
 
-.image-container {
-    flex: 1;            /* 動画の時と同じく、右側のスペースを全部使う */
-    width: 80%;         /* 元の動画設定に合わせる */
-    height: 300px;      /* 元の動画設定と同じ高さ */
-    margin: 0;
-    border-radius: 10px; /* 動画の時と同じ角丸 */
-    overflow: hidden;    /* ★重要：枠からはみ出た写真を隠す（ズーム用） */
-    background: #000;    /* 写真読み込み前の背景色 */
-    position: relative;
+.service-box {
+    display: flex;          /* ★重要：中身を横並びにする */
+    justify-content: space-between; /* ★重要：中身を端と端に寄せる */
+    align-items: center;    /* ★重要：中身の上下中央を揃える */
+    gap: 30px;              /* 文字と写真の間の隙間 */
+    
+    flex: 1;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    overflow: hidden; 
 }
 
+/* 文字エリア */
+.service-box .title-group {
+    flex: 1; /* スペースを広く確保 */
+    text-align: left;
+}
+
+/* 写真エリア */
+.image-container {
+    flex: 0 0 300px; /* ★重要：写真の幅を300pxに固定 */
+    height: 250px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin: 0;
+    background-color: #eee;
+}
 .service-img {
     width: 100%;
     height: 100%;
     object-fit: cover;   /* ★重要：枠の形に合わせて写真を切り抜く（歪ませない） */
     transition: transform 0.4s ease; /* ズームの滑らかさ */
-}
-
-.service-box:hover .service-img {
-    transform: scale(1.1); /* 1.1倍にズーム */
 }
 
 
