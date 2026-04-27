@@ -341,20 +341,6 @@ nav ul li.active {
     border: none;
 }
 
-/* レスポンシブ対応 */
-@media (max-width: 768px) {
-    .address-flex-container {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 30px;
-    }
-    .address-text, .map-container {
-        width: 100%;
-        flex: none;       /* 幅指定を解除 */
-    }
-}
-
-
 /* =============================================
    高専生セクション
    ============================================= */
@@ -554,15 +540,6 @@ nav ul li.active {
     background-color: #003366;
     transform: translateY(-3px);
 }
-
-/* レスポンシブ */
-@media (max-width: 900px) {
-    .kosen-intro-blue { padding: 60px 5%; }
-    .kosen-title { font-size: 2.2rem; }
-    .ann-grid { flex-direction: column; }
-    .ann-card { width: 100%; min-height: auto; margin-bottom: 20px; }
-}
-
 
 /* --- ボタン・リンク --- */
 .note-link {
@@ -817,26 +794,68 @@ nav ul li.active {
     margin: 0;
 }
 
-/* --- レレスポンシブ対応（スマホ） --- */
+
+
+/* =============================================
+   画面全体の一括レスポンシブ設定 (スマホ用)
+   ============================================= */
 @media (max-width: 768px) {
-    .sub-flex-container {
-        flex-direction: column; /* タテ並び */
+    /* 1. サービスセクション（英会話など） */
+    .service-link {
+        flex-direction: row !important; /* 絶対に横並びを維持 */
+        gap: 15px;
+        padding: 15px;
+    }
+    .image-container {
+        flex: 0 0 35% !important; /* 写真を画面の35%に固定 */
+        height: 100px !important;  /* 高さを抑えて縮小感を出す */
+    }
+    .service-box h2 {
+        font-size: 1.2rem !important; /* タイトルを小さく */
+    }
+
+    /* 2. プロフィール（メイン講師） */
+    .profile-flex-container {
+        flex-direction: row !important; /* 横並びを維持 */
         gap: 20px;
     }
-    
+    .profile-photo-box {
+        flex: 0 0 120px !important; /* 大きな写真を120pxまで縮小 */
+        height: 120px !important;
+    }
+    .profile-info-box h2 {
+        font-size: 1.5rem !important;
+    }
+
+    /* 3. サブ講師（丸い写真のカード） */
+    .sub-flex-container {
+        flex-direction: column !important; /* カード自体は縦に積む（横だと狭すぎるため） */
+    }
     .sub-coach-card {
-        padding: 20px;
-        flex-direction: column; /* カード内もタテ並びに（中央揃え） */
-        text-align: center;
+        flex-direction: row !important;    /* カードの中身（写真と文字）は横並びを維持 */
+        padding: 15px;
     }
-    
     .sub-photo-box {
-        flex: 0 0 100px; /* 写真を少し小さく */
-        height: 100px;
+        flex: 0 0 70px !important;  /* 丸写真を小さく */
+        height: 70px !important;
     }
-    
-    .sub-info-box {
-        text-align: center;
+
+    /* 4. アドレス（地図と住所） */
+    .address-flex-container {
+        flex-direction: row !important; /* 横並びを維持 */
+        gap: 15px;
+    }
+    .address-text h3 {
+        font-size: 1.5rem !important;
+    }
+    .map-container {
+        flex: 1 !important;
+        height: 150px !important; /* 地図を小さくして横に置く */
+    }
+
+    /* 5. 共通：文字サイズの微調整 */
+    p, .slide-item-text, .sub-desc {
+        font-size: 0.85rem !important;
+        line-height: 1.5 !important;
     }
 }
-
